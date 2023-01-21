@@ -2,6 +2,7 @@ import { useFonts, Inter_400Regular, Inter_600SemiBold, Inter_700Bold, Inter_800
 import { Loading } from './src/components/Loading';
 import { Home } from './src/screens/Home';
 import { StatusBar } from 'react-native';
+import './src/lib/day.js';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Inter_400Regular, Inter_600SemiBold, Inter_700Bold, Inter_800ExtraBold });
