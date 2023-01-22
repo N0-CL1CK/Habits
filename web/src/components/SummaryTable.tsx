@@ -1,5 +1,5 @@
 import { generateDates } from "../utils/generate-dates";
-import { DayHabits } from "./dayHabits";
+import { DayHabits } from "./DayHabits";
 
 const weekDays = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
 const summaryDates = generateDates();
@@ -20,7 +20,13 @@ export function SummaryTable() {
             </div>
             <div className="grid grid-rows-7 grid-flow-col gap-3">
                 {summaryDates.map(summaryDate => {
-                    return ( <DayHabits key={summaryDate.toString()} /> )
+                    return (
+                        <DayHabits
+                            key={summaryDate.toString()}
+                            amount={5}
+                            completed={1}
+                        />
+                    )
                 })}
                 {daysToFill > 0 && Array.from({ length: daysToFill }).map((_, i) => {
                     return (
