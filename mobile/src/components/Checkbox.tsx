@@ -10,7 +10,7 @@ interface CheckboxProps extends TouchableOpacityProps {
 function isChecked(chk: boolean) {
     if (chk) {
         return (
-            <View className='h-8 w-8 bg-green-600 rounded-lg items-center justify-center'>
+            <View className='h-8 w-8 bg-violet-500 rounded-lg items-center justify-center'>
                 <Feather 
                     name='check'
                     size={20}
