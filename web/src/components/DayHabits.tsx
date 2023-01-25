@@ -24,13 +24,13 @@ export function DayHabits({ defaultCompleted = 0, amount = 0, date }: dayHabitsP
 
     return (
         <Popover.Root>
-            <Popover.Trigger className={clsx('text-zinc-900 w-9 h-9 border-2 border-zinc-800 rounded-lg transition-colors duration-300', {
+            <Popover.Trigger className={clsx('w-9 h-9 border-2 rounded-lg transition-colors duration-300', {
                 ['bg-zinc-900 border-zinc-800']: completedPercentual === 0,
-                ['bg-violet-100 border-violet-700']: completedPercentual > 0 && completedPercentual < 20,
-                ['bg-violet-300 border-violet-700']: completedPercentual >= 20 && completedPercentual < 40,
-                ['bg-violet-500 border-violet-700']: completedPercentual >= 40 && completedPercentual < 60,
-                ['bg-violet-700 border-violet-700']: completedPercentual >= 60 && completedPercentual < 80,
-                ['bg-violet-900 border-violet-700']: completedPercentual >= 80,
+                ['bg-violet-100 border-violet-600']: completedPercentual > 0 && completedPercentual < 20,
+                ['bg-violet-300 border-violet-600']: completedPercentual >= 20 && completedPercentual < 40,
+                ['bg-violet-500 border-violet-600']: completedPercentual >= 40 && completedPercentual < 60,
+                ['bg-violet-700 border-violet-600']: completedPercentual >= 60 && completedPercentual < 80,
+                ['bg-violet-900 border-violet-600']: completedPercentual >= 80,
                 ['ring-white ring-2 ring-offset-2 ring-offset-background']: isToday
             })} />
             <Popover.Portal>
