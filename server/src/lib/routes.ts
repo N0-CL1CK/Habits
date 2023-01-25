@@ -35,8 +35,7 @@ export const appRoutes = async (app: FastifyInstance) => {
             include: { dayHabits: true }
         });
 
-        const completedHabits = day?.dayHabits.map(dayHabit => dayHabit.habit_id);
-        console.log(completedHabits);
+        const completedHabits = day?.dayHabits.map(dayHabit => dayHabit.habit_id) ?? [];
         return { possibleHabits, completedHabits }
     });
 
@@ -76,7 +75,7 @@ export const appRoutes = async (app: FastifyInstance) => {
                     HWD.week_day = cast(strftime('%w', D.date/1000.0, 'unixepoch') AS INT)
                 AND
                     H.created_at <= D.date
-            ) AS amount,
+            ) AS amount
         FROM days AS D
         `
     });
