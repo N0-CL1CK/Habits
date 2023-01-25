@@ -24,7 +24,7 @@ export function DayHabits({ defaultCompleted = 0, amount = 0, date }: dayHabitsP
 
     return (
         <Popover.Root>
-            <Popover.Trigger className={clsx('w-9 h-9 border-2 rounded-lg transition-colors duration-300', {
+            <Popover.Trigger className={clsx('w-10 h-10 border-2 rounded-lg transition-colors duration-300', {
                 ['bg-zinc-900 border-zinc-800']: completedPercentual === 0,
                 ['bg-violet-100 border-violet-600']: completedPercentual > 0 && completedPercentual < 20,
                 ['bg-violet-300 border-violet-600']: completedPercentual >= 20 && completedPercentual < 40,
