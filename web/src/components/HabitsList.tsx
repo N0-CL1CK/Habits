@@ -47,7 +47,7 @@ export function HabitsList({ date, onCompletedChanged }: HabitsListProps) {
 
     return (
         <div className='mt-6 flex flex-col gap-3'>
-            { habitsInfo?.possibleHabits
+            { habitsInfo?.possibleHabits.length
                 ? habitsInfo?.possibleHabits.map(habit => (
                     <Checkbox.Root 
                         key={habit.id} 
